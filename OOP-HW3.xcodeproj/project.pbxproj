@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810305191EC5F3EE00A0C46C /* DessertShop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 810305151EC5F3EE00A0C46C /* DessertShop.cpp */; };
 		817C872C1EC5F16700861D9C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 817C872B1EC5F16700861D9C /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		810305141EC5F3EE00A0C46C /* checkout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = checkout.txt; sourceTree = "<group>"; };
+		810305151EC5F3EE00A0C46C /* DessertShop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DessertShop.cpp; sourceTree = "<group>"; };
+		810305161EC5F3EE00A0C46C /* order.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = order.txt; sourceTree = "<group>"; };
+		810305171EC5F3EE00A0C46C /* output.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = output.txt; sourceTree = "<group>"; };
+		810305181EC5F3EE00A0C46C /* stock.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stock.txt; sourceTree = "<group>"; };
 		817C87281EC5F16700861D9C /* OOP-HW3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "OOP-HW3"; sourceTree = BUILT_PRODUCTS_DIR; };
 		817C872B1EC5F16700861D9C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +64,11 @@
 			isa = PBXGroup;
 			children = (
 				817C872B1EC5F16700861D9C /* main.cpp */,
+				810305141EC5F3EE00A0C46C /* checkout.txt */,
+				810305151EC5F3EE00A0C46C /* DessertShop.cpp */,
+				810305161EC5F3EE00A0C46C /* order.txt */,
+				810305171EC5F3EE00A0C46C /* output.txt */,
+				810305181EC5F3EE00A0C46C /* stock.txt */,
 			);
 			path = "OOP-HW3";
 			sourceTree = "<group>";
@@ -120,6 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810305191EC5F3EE00A0C46C /* DessertShop.cpp in Sources */,
 				817C872C1EC5F16700861D9C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +263,7 @@
 				817C87311EC5F16700861D9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
