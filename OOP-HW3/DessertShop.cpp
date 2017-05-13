@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <fstream>
 #include <cstdlib>
 #include <string>
 #include "shop.h"
@@ -9,31 +10,46 @@ using namespace std;
 
 
 int main() {
+    
+//    ifstream fileStock("stock.txt");
+//    string lineStock;
+//    while(getline(fileStock, lineStock)) {
+//        
+//    }
+//    
+//    ifstream fileOrder("order.txt");
+//    string lineOrder;
+//    while(getline(fileOrder, lineOrder)) {
+//        
+//    }
+    
     Cookie cookie1("Chocolate Chip Cookies",10, 180); //(name, pieces, priceperdozen)
 	Cookie cookie2("Cake Mix Cookies", 16, 210);
-	
+
 	Shop<Cookie> cookieShop(cookie1);
 	cookieShop.add(cookie2);
 	cout<<cookieShop<<endl;
-
-	//Catch an exception here while trying to access the element at(2)
-    cout << cookieShop[2] << endl;
-
-	Icecream icecream1("Chocolate ice cream",1.5, 170); //(name, litre, priceperlitre)
-	Shop<Icecream> icecreamShop(icecream1); 
-	cout<<icecreamShop<<endl;
-
-	//Catch an exception here while trying to set the discount to(50)       
-	icecreamShop.setDiscount(50);
-
-	Candy candy2("Gummi bears",12,89); //(name, weight, priceperkg)
-	Candy candy3("Hanukkah gelt",8,110);
-
-	Shop<Candy> candyShop(candy2);
-	candyShop.add(candy3);
+//
+//	//Catch an exception here while trying to access the element at(2)
+//    cout << cookieShop[2] << endl;
+//
+//	Icecream icecream1("Chocolate ice cream",1.5, 170); //(name, litre, priceperlitre)
+//	Shop<Icecream> icecreamShop(icecream1); 
+//	cout<<icecreamShop<<endl;
+//
+//	//Catch an exception here while trying to set the discount to(50)       
+//	icecreamShop.setDiscount(50);
+//
+//	Candy candy2("Gummi bears",12,89); //(name, weight, priceperkg)
+//	Candy candy3("Hanukkah gelt",8,110);
+//
+//	Shop<Candy> candyShop(candy2);
+//	candyShop.add(candy3);
+//    
+//    candyShop.setDiscount(15);
+//    cout<<candyShop<<endl;
     
-    candyShop.setDiscount(15);
-    cout<<candyShop<<endl;
+}
 	
 /*You will also
 1) Read dessert stock and customer order from "stock.txt" and "order.txt", respectively.

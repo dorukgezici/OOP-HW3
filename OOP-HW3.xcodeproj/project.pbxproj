@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		810305191EC5F3EE00A0C46C /* DessertShop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 810305151EC5F3EE00A0C46C /* DessertShop.cpp */; };
-		817C872C1EC5F16700861D9C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 817C872B1EC5F16700861D9C /* main.cpp */; };
+		816960231EC7A3AF00F4B7B0 /* icecream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816960221EC7A3AF00F4B7B0 /* icecream.cpp */; };
+		816960251EC7A3BC00F4B7B0 /* cookie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816960241EC7A3BC00F4B7B0 /* cookie.cpp */; };
+		816960271EC7A3CC00F4B7B0 /* candy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816960261EC7A3CC00F4B7B0 /* candy.cpp */; };
+		816960291EC7A3D800F4B7B0 /* shop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816960281EC7A3D800F4B7B0 /* shop.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +32,15 @@
 		810305161EC5F3EE00A0C46C /* order.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = order.txt; sourceTree = "<group>"; };
 		810305171EC5F3EE00A0C46C /* output.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = output.txt; sourceTree = "<group>"; };
 		810305181EC5F3EE00A0C46C /* stock.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stock.txt; sourceTree = "<group>"; };
+		8169601D1EC6078500F4B7B0 /* shop.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = shop.h; sourceTree = "<group>"; };
+		8169601E1EC607A400F4B7B0 /* candy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = candy.h; sourceTree = "<group>"; };
+		816960201EC607F400F4B7B0 /* cookie.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = cookie.h; sourceTree = "<group>"; };
+		816960211EC6080500F4B7B0 /* icecream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = icecream.h; sourceTree = "<group>"; };
+		816960221EC7A3AF00F4B7B0 /* icecream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = icecream.cpp; sourceTree = "<group>"; };
+		816960241EC7A3BC00F4B7B0 /* cookie.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cookie.cpp; sourceTree = "<group>"; };
+		816960261EC7A3CC00F4B7B0 /* candy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = candy.cpp; sourceTree = "<group>"; };
+		816960281EC7A3D800F4B7B0 /* shop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shop.cpp; sourceTree = "<group>"; };
 		817C87281EC5F16700861D9C /* OOP-HW3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "OOP-HW3"; sourceTree = BUILT_PRODUCTS_DIR; };
-		817C872B1EC5F16700861D9C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +54,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8169601F1EC607C000F4B7B0 /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+				810305141EC5F3EE00A0C46C /* checkout.txt */,
+				810305161EC5F3EE00A0C46C /* order.txt */,
+				810305171EC5F3EE00A0C46C /* output.txt */,
+				810305181EC5F3EE00A0C46C /* stock.txt */,
+			);
+			name = Texts;
+			sourceTree = "<group>";
+		};
 		817C871F1EC5F16700861D9C = {
 			isa = PBXGroup;
 			children = (
@@ -63,12 +84,16 @@
 		817C872A1EC5F16700861D9C /* OOP-HW3 */ = {
 			isa = PBXGroup;
 			children = (
-				817C872B1EC5F16700861D9C /* main.cpp */,
-				810305141EC5F3EE00A0C46C /* checkout.txt */,
 				810305151EC5F3EE00A0C46C /* DessertShop.cpp */,
-				810305161EC5F3EE00A0C46C /* order.txt */,
-				810305171EC5F3EE00A0C46C /* output.txt */,
-				810305181EC5F3EE00A0C46C /* stock.txt */,
+				8169601D1EC6078500F4B7B0 /* shop.h */,
+				816960281EC7A3D800F4B7B0 /* shop.cpp */,
+				8169601E1EC607A400F4B7B0 /* candy.h */,
+				816960261EC7A3CC00F4B7B0 /* candy.cpp */,
+				816960201EC607F400F4B7B0 /* cookie.h */,
+				816960241EC7A3BC00F4B7B0 /* cookie.cpp */,
+				816960211EC6080500F4B7B0 /* icecream.h */,
+				816960221EC7A3AF00F4B7B0 /* icecream.cpp */,
+				8169601F1EC607C000F4B7B0 /* Texts */,
 			);
 			path = "OOP-HW3";
 			sourceTree = "<group>";
@@ -131,8 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				816960231EC7A3AF00F4B7B0 /* icecream.cpp in Sources */,
+				816960271EC7A3CC00F4B7B0 /* candy.cpp in Sources */,
+				816960251EC7A3BC00F4B7B0 /* cookie.cpp in Sources */,
+				816960291EC7A3D800F4B7B0 /* shop.cpp in Sources */,
 				810305191EC5F3EE00A0C46C /* DessertShop.cpp in Sources */,
-				817C872C1EC5F16700861D9C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
