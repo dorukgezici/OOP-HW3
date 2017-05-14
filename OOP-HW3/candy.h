@@ -10,13 +10,18 @@
 #define candy_h
 
 #include <string>
+#include "dessert.h"
 
-class Candy {
+class Candy : public Dessert {
     std::string name;
     float weight;
-    int pricePerKg;
+    float pricePerKg;
 public:
-    Candy(std::string name, float weight, int pricePerKg);
+    Candy() { weight = 0; pricePerKg = 0; };
+    Candy(std::string name, float weight, float pricePerKg);
+    std::string getName() const;
+    float getQuantity() const;
+    float getPricePerQuantity() const;
     float getCost() const;
 };
 

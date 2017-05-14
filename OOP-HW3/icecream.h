@@ -10,13 +10,18 @@
 #define icecream_h
 
 #include <string>
+#include "dessert.h"
 
-class Icecream {
+class Icecream : public Dessert {
     std::string name;
     float litre;
     int pricePerLitre;
 public:
+    Icecream() { litre = 0; pricePerLitre = 0; };
     Icecream(std::string name, float litre, int pricePerLitre);
+    std::string getName() const;
+    float getQuantity() const;
+    float getPricePerQuantity() const;
     float getCost() const;
 };
 

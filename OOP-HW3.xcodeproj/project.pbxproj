@@ -32,6 +32,7 @@
 		810305161EC5F3EE00A0C46C /* order.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = order.txt; sourceTree = "<group>"; };
 		810305171EC5F3EE00A0C46C /* output.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = output.txt; sourceTree = "<group>"; };
 		810305181EC5F3EE00A0C46C /* stock.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stock.txt; sourceTree = "<group>"; };
+		8119171E1EC885C700E85351 /* dessert.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = dessert.h; sourceTree = "<group>"; };
 		8169601D1EC6078500F4B7B0 /* shop.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = shop.h; sourceTree = "<group>"; };
 		8169601E1EC607A400F4B7B0 /* candy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = candy.h; sourceTree = "<group>"; };
 		816960201EC607F400F4B7B0 /* cookie.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = cookie.h; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 				810305151EC5F3EE00A0C46C /* DessertShop.cpp */,
 				8169601D1EC6078500F4B7B0 /* shop.h */,
 				816960281EC7A3D800F4B7B0 /* shop.cpp */,
+				8119171E1EC885C700E85351 /* dessert.h */,
 				8169601E1EC607A400F4B7B0 /* candy.h */,
 				816960261EC7A3CC00F4B7B0 /* candy.cpp */,
 				816960201EC607F400F4B7B0 /* cookie.h */,

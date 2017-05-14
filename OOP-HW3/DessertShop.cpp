@@ -3,9 +3,11 @@
 #include <cstdlib>
 #include <string>
 #include "shop.h"
+#include "dessert.h"
 #include "candy.h"
 #include "cookie.h"
 #include "icecream.h"
+
 using namespace std;
 
 
@@ -29,25 +31,33 @@ int main() {
 	Shop<Cookie> cookieShop(cookie1);
 	cookieShop.add(cookie2);
 	cout<<cookieShop<<endl;
-//
-//	//Catch an exception here while trying to access the element at(2)
-//    cout << cookieShop[2] << endl;
-//
-//	Icecream icecream1("Chocolate ice cream",1.5, 170); //(name, litre, priceperlitre)
-//	Shop<Icecream> icecreamShop(icecream1); 
-//	cout<<icecreamShop<<endl;
-//
-//	//Catch an exception here while trying to set the discount to(50)       
-//	icecreamShop.setDiscount(50);
-//
-//	Candy candy2("Gummi bears",12,89); //(name, weight, priceperkg)
-//	Candy candy3("Hanukkah gelt",8,110);
-//
-//	Shop<Candy> candyShop(candy2);
-//	candyShop.add(candy3);
-//    
-//    candyShop.setDiscount(15);
-//    cout<<candyShop<<endl;
+
+    //Catch an exception here while trying to access the element at(2)
+    try {
+        cout << cookieShop[2] << endl;
+    } catch (const char *error) {
+        cout << "***************************" << endl << error << endl;
+    }
+
+	Icecream icecream1("Chocolate ice cream",1.5, 170); //(name, litre, priceperlitre)
+	Shop<Icecream> icecreamShop(icecream1);
+	cout<<icecreamShop<<endl;
+
+	//Catch an exception here while trying to set the discount to(50)       
+    try {
+        icecreamShop.setDiscount(50);
+    } catch (const char *error) {
+        cout << "***************************" << endl << error << endl;
+    }
+
+	Candy candy2("Gummi bears",12,89); //(name, weight, priceperkg)
+	Candy candy3("Hanukkah gelt",8,110);
+
+	Shop<Candy> candyShop(candy2);
+	candyShop.add(candy3);
+
+    candyShop.setDiscount(15);
+    cout<<candyShop<<endl;
     
 }
 	

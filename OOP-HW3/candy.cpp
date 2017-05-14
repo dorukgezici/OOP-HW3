@@ -8,10 +8,23 @@
 
 #include "candy.h"
 
-Candy::Candy(std::string name, float weight, int pricePerKg) {
+Candy::Candy(std::string name, float weight, float pricePerKg) {
+    this->setType("candies");
     this->name = name;
     this->weight = weight;
     this->pricePerKg = pricePerKg;
+}
+
+std::string Candy::getName() const {
+    return name;
+}
+
+float Candy::getQuantity() const {
+    return weight;
+}
+
+float Candy::getPricePerQuantity() const {
+    return pricePerKg;
 }
 
 float Candy::getCost() const {
