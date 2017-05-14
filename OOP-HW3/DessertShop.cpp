@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 #include <fstream>
+#include <sstream>
 #include <cstdlib>
+#include <stdio.h>
 #include <string>
 #include "shop.h"
 #include "dessert.h"
@@ -13,17 +15,128 @@ using namespace std;
 
 int main() {
     
-//    ifstream fileStock("stock.txt");
-//    string lineStock;
-//    while(getline(fileStock, lineStock)) {
-//        
-//    }
-//    
-//    ifstream fileOrder("order.txt");
-//    string lineOrder;
-//    while(getline(fileOrder, lineOrder)) {
-//        
-//    }
+    Shop<Cookie> cookieStock;
+    Shop<Candy> candyStock;
+    Shop<Icecream> icecreamStock;
+    
+    ifstream fileStock("stock.txt");
+    string lineStock;
+    struct Stock {
+        string name;
+        int type;
+        int itemCount;
+        int price;
+    };
+    int i = 0;
+    while (getline(fileStock, lineStock)) {
+        stringstream ss(lineStock);
+        Stock stock;
+        while (getline(ss, lineStock, '\t')) {
+            if (i > 3) {
+                if (i % 4 == 0) stock.name = lineStock;
+                else if (i % 4 == 1) stock.type = stoi(lineStock);
+                else if (i % 4 == 2) stock.itemCount = stoi(lineStock);
+                else if (i % 4 == 3) {
+                    stock.price = stoi(lineStock);
+                    switch (stock.type) {
+                        case 1:
+                        {
+                            Cookie cookie(stock.name, stock.itemCount, stock.price);
+                            cookieStock.add(cookie);
+                            break;
+                        }
+                        case 2:
+                        {
+                            Candy candy(stock.name, stock.itemCount, stock.price);
+                            candyStock.add(candy);
+                            break;
+                        }
+                        case 3:
+                        {
+                            Icecream icecream(stock.name, stock.itemCount, stock.price);
+                            icecreamStock.add(icecream);
+                            break;
+                        }
+                        default:
+                            break;
+                    }
+                }
+            }
+            i++;
+        }
+    }
+    
+    cout << "~~~~~STOCK~~~~~" << cookieStock << candyStock << icecreamStock << endl << endl;
+    
+    cout << endl << endl << "~~~~~~~EXPECTED OUTPUT FOR CHECKOUT~~~~~~~" << endl;
+    
+    Shop<Dessert> checkout;
+    checkout.setDiscount(10);
+    
+    ifstream fileOrder("order.txt");
+    ofstream fileCheckout("checkout1.txt");
+    string lineOrder;
+    struct Order {
+        string name;
+        int type;
+        int quantity;
+    };
+    int j = 0;
+    while(getline(fileOrder, lineOrder)) {
+        stringstream ss(lineOrder);
+        Order order;
+        while(getline(ss, lineOrder, '\t')) {
+            if (j % 3 == 0) order.name = lineOrder;
+            else if (j % 3 == 1) order.type = stoi(lineOrder);
+            else if (j % 3 == 2) {
+                order.quantity = stoi(lineOrder);
+                Dessert dessert;
+                switch (order.type) {
+                    case 1:
+                    {
+                        try {
+                            int pricePer = cookieStock.checkStock(order.name, order.type, order.quantity).getPricePerQuantity();
+                            dessert = Dessert(order.name, order.quantity, pricePer);
+                        } catch (const char *error) {
+                            cout << error << endl;
+                            fileCheckout << error << endl;
+                        }
+                        break;
+                    }
+                    case 2:
+                    {
+                        try {
+                            int pricePer = candyStock.checkStock(order.name, order.type, order.quantity).getPricePerQuantity();
+                            dessert = Dessert(order.name, order.quantity, pricePer);
+                        } catch (const char *error) {
+                            cout << error << endl;
+                            fileCheckout << error << endl;
+                        }
+                        break;
+                    }
+                    case 3:
+                    {
+                        try {
+                            int pricePer = icecreamStock.checkStock(order.name, order.type, order.quantity).getPricePerQuantity();
+                            dessert = Dessert(order.name, order.quantity, pricePer);
+                        } catch (const char *error) {
+                            cout << error << endl;
+                            fileCheckout << error << endl;
+                        }
+                        break;
+                    }
+                    default:
+                        break;
+                }
+                checkout.add(dessert);
+            }
+            j++;
+        }
+    }
+    
+    cout << checkout << endl << endl;
+    
+    cout << endl << endl << "~~~~~~~OUTPUT OF TEST~~~~~~~";
     
     Cookie cookie1("Chocolate Chip Cookies",10, 180); //(name, pieces, priceperdozen)
 	Cookie cookie2("Cake Mix Cookies", 16, 210);

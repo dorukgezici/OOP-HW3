@@ -9,10 +9,20 @@
 #include "shop.h"
 
 template <class Type>
+Shop<Type>::Shop() {
+    desserts = new Type[1];
+    type = "dessert";
+    typeNo = 0;
+    count = 0;
+    discount = 0;
+}
+
+template <class Type>
 Shop<Type>::Shop(Type dessert) {
     desserts = new Type[1];
     desserts[0] = dessert;
-    type = 
+    type = dessert.getType();
+    typeNo = dessert.getTypeNo();
     count = 1;
     discount = 0;
 }
@@ -47,6 +57,8 @@ void Shop<Type>::add(Type dessert) {
     }
     tmp[count] = dessert;
     desserts = tmp;
+    type = dessert.getType();
+    typeNo = dessert.getTypeNo();
     count++;
 }
 
@@ -83,6 +95,25 @@ float Shop<Type>::getTotalCost() const {
     return total;
 }
 
+template <class Type>
+Type& Shop<Type>::checkStock(std::string name, int type, int quantity) const {
+    if (this->typeNo == type) {
+        for (int i = 0; i < count; i++) {
+            if (desserts[i].getName() == name && desserts[i].getQuantity() >= quantity) {
+                return desserts[i];
+            }
+        }
+    }
+    std::string error = "!!! We don't have ";
+    error.append(std::to_string(quantity));
+    error.append(" (");
+    error.append(name);
+    error.append(")s.");
+    throw error.c_str();
+    
+}
+
+template class Shop<Dessert>;
 template class Shop<Candy>;
 template class Shop<Cookie>;
 template class Shop<Icecream>;

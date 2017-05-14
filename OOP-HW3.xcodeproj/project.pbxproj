@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		810305191EC5F3EE00A0C46C /* DessertShop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 810305151EC5F3EE00A0C46C /* DessertShop.cpp */; };
+		811917201EC89D1400E85351 /* checkout.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 810305141EC5F3EE00A0C46C /* checkout.txt */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		811917211EC89D1400E85351 /* order.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 810305161EC5F3EE00A0C46C /* order.txt */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		811917221EC89D1400E85351 /* output.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 810305171EC5F3EE00A0C46C /* output.txt */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		811917231EC89D1400E85351 /* stock.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 810305181EC5F3EE00A0C46C /* stock.txt */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		816960231EC7A3AF00F4B7B0 /* icecream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816960221EC7A3AF00F4B7B0 /* icecream.cpp */; };
 		816960251EC7A3BC00F4B7B0 /* cookie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816960241EC7A3BC00F4B7B0 /* cookie.cpp */; };
 		816960271EC7A3CC00F4B7B0 /* candy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 816960261EC7A3CC00F4B7B0 /* candy.cpp */; };
@@ -17,12 +21,16 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		817C87261EC5F16700861D9C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				811917201EC89D1400E85351 /* checkout.txt in CopyFiles */,
+				811917211EC89D1400E85351 /* order.txt in CopyFiles */,
+				811917221EC89D1400E85351 /* output.txt in CopyFiles */,
+				811917231EC89D1400E85351 /* stock.txt in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -89,10 +97,10 @@
 				8169601D1EC6078500F4B7B0 /* shop.h */,
 				816960281EC7A3D800F4B7B0 /* shop.cpp */,
 				8119171E1EC885C700E85351 /* dessert.h */,
-				8169601E1EC607A400F4B7B0 /* candy.h */,
-				816960261EC7A3CC00F4B7B0 /* candy.cpp */,
 				816960201EC607F400F4B7B0 /* cookie.h */,
 				816960241EC7A3BC00F4B7B0 /* cookie.cpp */,
+				8169601E1EC607A400F4B7B0 /* candy.h */,
+				816960261EC7A3CC00F4B7B0 /* candy.cpp */,
 				816960211EC6080500F4B7B0 /* icecream.h */,
 				816960221EC7A3AF00F4B7B0 /* icecream.cpp */,
 				8169601F1EC607C000F4B7B0 /* Texts */,

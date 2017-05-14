@@ -20,9 +20,11 @@ template <class Type>
 class Shop {
     Type *desserts;
     std::string type;
+    int typeNo;
     int count;
     int discount;
 public:
+    Shop();
     Shop(Type dessert);
     ~Shop();
     Type& operator[](int i) const;
@@ -33,6 +35,7 @@ public:
     void setDiscount(int discount);
     float getTotalRawCost() const;
     float getTotalCost() const;
+    Type& checkStock(std::string name, int type, int quantity) const;
     friend std::ostream& operator<<(std::ostream& os, const Shop<Type>& shop) {
         os << std::endl << "***************************" << std::endl << "Number of items:" << shop.count << std::endl;
         for (int i = 0; i < shop.getCount(); i++) {
